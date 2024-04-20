@@ -1,0 +1,12 @@
+.list-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.list-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333333;
+}
