@@ -34,5 +34,16 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
+}
+
+.cart-icon {
     font-size: 1.5rem;
+    color: #333333;
+}
+
+.cart-number {
+    background-color: #CCCCCC;
+    padding: 0.2rem 0.5rem;
+    border-radius: 50%;
+    font-size: 0.8rem;
 }

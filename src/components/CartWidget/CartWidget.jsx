@@ -3,7 +3,8 @@ import { FaOpencart } from "react-icons/fa";
 const CartWidget = () => {
   return (
     <div className="cart-widget">
-      <FaOpencart />
+      <FaOpencart className="cart-icon" />
+      <span className="cart-number">0</span>
     </div>
   );
 };
