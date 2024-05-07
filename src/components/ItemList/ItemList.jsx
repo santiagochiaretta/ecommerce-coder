@@ -2,12 +2,14 @@ import Item from "../Item/Item";
 
 const ItemList = ({ items }) => {
   return (
-    <div className="item-list">
-      <h2>Products list</h2>
-      {items.map((item) => (
-        <Item key={item.id} item={item} />
-      ))}
-    </div>
+    <>
+      <h2 className="item-list-title">Products list</h2>
+      <div className="item-list">
+        {items.map((item) => (
+          <Item key={item.id} item={item} />
+        ))}
+      </div>
+    </>
   );
 };
 

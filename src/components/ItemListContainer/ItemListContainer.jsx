@@ -6,11 +6,36 @@ const fetchItems = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve([
-        { id: 1, name: "Product 1", price: 100 },
-        { id: 2, name: "Product 2", price: 200 },
-        { id: 3, name: "Product 3", price: 300 },
-        { id: 4, name: "Product 4", price: 400 },
-        { id: 5, name: "Product 5", price: 500 },
+        {
+          id: 1,
+          imageUrl: "https://picsum.photos/200",
+          name: "Product 1",
+          price: 10,
+        },
+        {
+          id: 2,
+          imageUrl: "https://picsum.photos/200",
+          name: "Product 2",
+          price: 20,
+        },
+        {
+          id: 3,
+          imageUrl: "https://picsum.photos/200",
+          name: "Product 3",
+          price: 30,
+        },
+        {
+          id: 4,
+          imageUrl: "https://picsum.photos/200",
+          name: "Product 4",
+          price: 40,
+        },
+        {
+          id: 5,
+          imageUrl: "https://picsum.photos/200",
+          name: "Product 5",
+          price: 50,
+        },
       ]);
     }, 3000);
   });
