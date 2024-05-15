@@ -1,0 +1,75 @@
+[
+    {
+      "id": "001",
+      "title": "Filtro de aceite",
+      "description": "Filtro de aceite de alta calidad para mantener el motor en óptimas condiciones.",
+      "category": "Ford",
+      "stock": "10",
+      "price": 1500
+    },
+    {
+      "id": "002",
+      "title": "Pastillas de freno",
+      "description": "Pastillas de freno resistentes y duraderas para un frenado seguro.",
+      "category": "Ford",
+      "stock": "15",
+      "price": 2000
+    },
+    {
+      "id": "003",
+      "title": "Amortiguadores",
+      "description": "Amortiguadores de calidad premium para una conducción suave y confortable.",
+      "category": "Ford",
+      "stock": "8",
+      "price": 5000
+    },
+    {
+      "id": "004",
+      "title": "Bujías de encendido",
+      "description": "Bujías de encendido de alto rendimiento para mejorar la eficiencia del motor.",
+      "category": "Chevrolet",
+      "stock": "12",
+      "price": 1200
+    },
+    {
+      "id": "005",
+      "title": "Filtro de aire",
+      "description": "Filtro de aire de calidad premium para mejorar el rendimiento del motor.",
+      "category": "Chevrolet",
+      "stock": "20",
+      "price": 1800
+    },
+    {
+      "id": "006",
+      "title": "Líquido de frenos",
+      "description": "Líquido de frenos de alto rendimiento para un frenado eficaz.",
+      "category": "Chevrolet",
+      "stock": "18",
+      "price": 1000
+    },
+    {
+      "id": "007",
+      "title": "Batería",
+      "description": "Batería de larga duración para un arranque confiable en todo momento.",
+      "category": "Volkswagen",
+      "stock": "14",
+      "price": 3000
+    },
+    {
+      "id": "008",
+      "title": "Aceite de motor",
+      "description": "Aceite de motor sintético para un rendimiento óptimo del motor.",
+      "category": "Volkswagen",
+      "stock": "22",
+      "price": 2500
+    },
+    {
+      "id": "009",
+      "title": "Correa de distribución",
+      "description": "Correa de distribución de alta resistencia para un funcionamiento suave del motor.",
+      "category": "Volkswagen",
+      "stock": "9",
+      "price": 3500
+    }
+  ]
+  

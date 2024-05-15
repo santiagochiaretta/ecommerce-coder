@@ -1,12 +1,10 @@
-const Item = ({ item }) => {
+const Item = ({ title, category, price }) => {
   return (
-    <div className="item-card">
-      <img src={item.imageUrl} alt={item.name} className="item-image" />
-      <div className="item-detail">
-        <h3>{item.name}</h3>
-        <p>Price: {item.price}€</p>
-      </div>
-    </div>
+    <article className="card-item">
+      <h3>{title}</h3>
+      <p>{category}</p>
+      <span>$ {price}</span>
+    </article>
   );
 };
 
