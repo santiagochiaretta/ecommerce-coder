@@ -1,16 +1,19 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import productsJson from "../../data/productsData.json";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
+
+  const { itemId } = useParams();
 
   useEffect(() => {
     const getProduct = (productList) =>
       new Promise((resolve, reject) => {
         setTimeout(() => {
-          if (productList[1]) {
-            resolve(productList[1]);
+          if (productList.length) {
+            resolve(productList.find((prod) => prod.id === itemId));
           } else {
             reject("Error");
           }
@@ -24,6 +27,7 @@ const ItemDetailContainer = () => {
 
   return (
     <section>
+      <h1>Item Detail</h1>
       {product ? <ItemDetail item={product} /> : <p>Searching...</p>}
     </section>
   );

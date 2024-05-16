@@ -2,16 +2,23 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import productsJson from "../../data/productsData.json";
 import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
+
+  const { categoryId } = useParams();
 
   useEffect(() => {
     const getProducts = (productList) =>
       new Promise((resolve, reject) => {
         setTimeout(() => {
           if (productList.length) {
-            resolve(productList);
+            categoryId
+              ? resolve(
+                  productList.filter((prod) => prod.category === categoryId)
+                )
+              : resolve(productList);
           } else {
             reject("Error");
           }
@@ -21,7 +28,7 @@ const ItemListContainer = () => {
     getProducts(productsJson)
       .then((res) => setProducts(res))
       .catch((err) => console.log(`${err} : No products found`));
-  }, []);
+  }, [categoryId]);
 
   return (
     <section className="list-container">
