@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
 import productsJson from "../../data/productsData.json";
 import "./ItemListContainer.css";
-import { useParams } from "react-router-dom";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -32,12 +32,7 @@ const ItemListContainer = () => {
 
   return (
     <section className="list-container">
-      <h1>¡Welcome to VirtualStore!</h1>
-      {products.length ? (
-        <ItemList list={products} />
-      ) : (
-        <p>There aren't products</p>
-      )}
+      {products.length ? <ItemList list={products} /> : <p>Cargando...</p>}
     </section>
   );
 };

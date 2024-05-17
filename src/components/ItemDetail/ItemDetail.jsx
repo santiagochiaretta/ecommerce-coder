@@ -12,14 +12,14 @@ const ItemDetail = ({ item }) => {
   return (
     <article className="card-item-detail">
       <div>
-        <img src="" alt="card-img" />
+        <img src={item.image} alt="card-img" className="item-detail-img"/>
       </div>
-      <div>
-        <h3>{item.title}</h3>
-        <p>{item.description}</p>
-        <p>$ {item.price}</p>
+      <div className="item-info">
+        <h3 className="item-title">{item.title}</h3>
+        <p className="item-description">{item.description}</p>
+        <p className="item-price">${item.price}</p>
         {quantity ? (
-          <Link to={"/cart"}>Ver {quantity} productos en carrito</Link>
+          <Link to={"/cart"} className="btn">Ver {quantity} productos en carrito</Link>
         ) : (
           <ItemCount stock={item.stock} initial={1} onAdd={onAdd} />
         )}

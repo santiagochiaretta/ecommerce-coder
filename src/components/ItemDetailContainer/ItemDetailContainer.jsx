@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import productsJson from "../../data/productsData.json";
 import { useParams } from "react-router-dom";
+import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState(null);
@@ -26,9 +27,8 @@ const ItemDetailContainer = () => {
   }, []);
 
   return (
-    <section>
-      <h1>Item Detail</h1>
-      {product ? <ItemDetail item={product} /> : <p>Searching...</p>}
+    <section className="detail-container">
+      {product ? <ItemDetail item={product} /> : <p>Buscando...</p>}
     </section>
   );
 };

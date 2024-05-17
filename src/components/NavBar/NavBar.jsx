@@ -10,13 +10,13 @@ const NavBar = () => {
       </h3>
       <ul className="navbar-list">
         <li>
-          <Link to={"/category/chevrolet"}>Chevrolet</Link>
+          <Link to={"/category/correas"}>Correas</Link>
         </li>
         <li>
-          <Link to={"/category/ford"}>Ford</Link>
+          <Link to={"/category/filtros"}>Filtros</Link>
         </li>
         <li>
-          <Link to={"/category/volkswagen"}>Volkswagen</Link>
+          <Link to={"/category/rodamientos"}>Rodamientos</Link>
         </li>
       </ul>
       <CartWidget />
