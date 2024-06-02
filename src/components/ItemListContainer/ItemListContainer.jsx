@@ -1,38 +1,42 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
-import productsJson from "../../data/productsData.json";
+import {
+  collection,
+  getDocs,
+  getFirestore,
+  query,
+  where,
+} from "firebase/firestore";
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
-  const [products, setProducts] = useState([]);
-
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
 
   useEffect(() => {
-    const getProducts = (productList) =>
-      new Promise((resolve, reject) => {
-        setTimeout(() => {
-          if (productList.length) {
-            categoryId
-              ? resolve(
-                  productList.filter((prod) => prod.category === categoryId)
-                )
-              : resolve(productList);
-          } else {
-            reject("Error");
-          }
-        }, 2000);
-      });
-
-    getProducts(productsJson)
-      .then((res) => setProducts(res))
-      .catch((err) => console.log(`${err} : No products found`));
+    const db = getFirestore();
+    const itemsCollection = collection(db, "items");
+    const resultQuery = categoryId
+      ? query(itemsCollection, where("category", "==", categoryId))
+      : itemsCollection;
+    getDocs(resultQuery).then((snapShot) => {
+      if (snapShot.size > 0) {
+        setItems(
+          snapShot.docs.map((item) => ({ id: item.id, ...item.data() }))
+        );
+        setLoading(false);
+      } else {
+        console.log("No existen documentos");
+        setItems([]);
+      }
+    });
   }, [categoryId]);
 
   return (
     <section className="list-container">
-      {products.length ? <ItemList list={products} /> : <p>Cargando...</p>}
+      {loading ? <p>Cargando...</p> : <ItemList list={items} />}
     </section>
   );
 };

@@ -1,24 +1,23 @@
-import { initializeApp } from "firebase/app";
-import { BrowserRouter } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDwHR6eeQ-KiixS9RObKwN9wXIg0wDYREA",
-  authDomain: "ecommercecoder-de289.firebaseapp.com",
-  projectId: "ecommercecoder-de289",
-  storageBucket: "ecommercecoder-de289.appspot.com",
-  messagingSenderId: "433421004529",
-  appId: "1:433421004529:web:0f6cc8c457d15fa34e0350",
+  apiKey: "AIzaSyDQ_o5qMk1VigcKwPXdeoaVdyyBrBEFQzU",
+  authDomain: "ecommerce-coder-aa246.firebaseapp.com",
+  projectId: "ecommerce-coder-aa246",
+  storageBucket: "ecommerce-coder-aa246.appspot.com",
+  messagingSenderId: "369974271744",
+  appId: "1:369974271744:web:37e3d79984530c1e9b5de5",
 };
 
+// Initialize Firebase
 initializeApp(firebaseConfig);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);

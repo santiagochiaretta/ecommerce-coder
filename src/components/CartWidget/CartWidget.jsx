@@ -1,16 +1,29 @@
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
 import { Link } from "react-router-dom";
 import { FaOpencart } from "react-icons/fa";
 
 const CartWidget = () => {
-  return (
-    <div className="cart-widget">
-      <Link to={"/cart"}>
-        <FaOpencart className="cart-icon" />
-      </Link>
+  const { getCartCount } = useContext(CartContext);
 
-      <span className="cart-number">0</span>
-    </div>
-  );
+  if (getCartCount() > 0) {
+    return (
+      <div className="cart-widget">
+        <Link to={"/cart"}>
+          <FaOpencart className="cart-icon" />
+        </Link>
+        <span className="cart-number">{getCartCount()}</span>
+      </div>
+    );
+  } else {
+    return (
+      <div className="cart-widget">
+        <Link to={"/cart"}>
+          <FaOpencart className="cart-icon" />
+        </Link>
+      </div>
+    );
+  }
 };
 
 export default CartWidget;
