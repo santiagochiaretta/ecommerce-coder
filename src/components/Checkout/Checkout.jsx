@@ -31,7 +31,11 @@ const Checkout = () => {
       price: item.price,
       quantity: item.quantity,
     }));
-    const order = { buyer, items, total: getCartTotal() };
+    const fecha = new Date();
+    const date = `${fecha.getDate()}-${
+      fecha.getMonth() + 1
+    }-${fecha.getFullYear()} ${fecha.getHours()}:${fecha.getMinutes()}:${fecha.getSeconds()}`;
+    const order = { buyer, items, date: date, total: getCartTotal() };
     const db = getFirestore();
     const ordersCollection = collection(db, "orders");
     try {
