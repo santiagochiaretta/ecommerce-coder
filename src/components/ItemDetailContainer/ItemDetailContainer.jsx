@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+import Loader from "../Loader/Loader";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 
@@ -25,7 +26,7 @@ const ItemDetailContainer = () => {
 
   return (
     <section className="detail-container">
-      {loading ? <p>Buscando...</p> : <ItemDetail item={item} />}
+      {loading ? <Loader /> : <ItemDetail item={item} />}
     </section>
   );
 };

@@ -1,0 +1,51 @@
+.item-count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 8px;
+    font-family: "Nunito", sans-serif;
+}
+
+.item-count p {
+    font-size: 14px;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.item-count div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:disabled {
+    background-color: #CCCCCC;
+    cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+    background-color: #999999;
+}
+
+.count-quantity {
+    font-size: 16px;
+    margin: 0 15px;
+    min-width: 40px;
+    text-align: center;
+}

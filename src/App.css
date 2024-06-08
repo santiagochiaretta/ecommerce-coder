@@ -1,14 +1,17 @@
+/* general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* enlaces */
 a {
     color: inherit;
     text-decoration: none;
 }
 
+/* listas */
 ul,
 ol {
     margin: 0;
@@ -16,6 +19,7 @@ ol {
     list-style: none;
 }
 
+/* formularios */
 input,
 textarea,
 select {
@@ -23,16 +27,4 @@ select {
     padding: 0;
     border: none;
     outline: none;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }

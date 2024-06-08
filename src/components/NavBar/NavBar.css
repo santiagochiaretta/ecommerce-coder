@@ -1,49 +1,101 @@
 .navbar {
+    background-color: #333333;
+    color: #F7F7F7;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: #F7F7F7;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    font-family: "Nunito", sans-serif;
 }
 
-.navbar h3 {
-    color: #333333;
+.navbar-title {
+    margin: 0;
     transition: all 0.3s ease-in-out;
 }
 
-.navbar h3:hover {
-    transform: scale(1.1);
+.navbar-title:hover {
+    transform: scale(1.05);
 }
 
+.navbar-title-link {
+    color: #F7F7F7;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: "Lora", serif;
+}
+
+.navbar-title-link:hover {
+    color: #CCCCCC;
+}
 
 .navbar-list {
+    margin: 0;
+    padding: 0;
     display: flex;
-    gap: 10rem;
+    list-style-type: none;
+    gap: 70px;
 }
 
-.navbar-list a {
-    transition: all 0.3s ease-in-out;
+.navbar-list-item-link {
+    color: #F7F7F7;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 15px;
 }
-.navbar-list a:hover {
+
+.navbar-list-item-link.active {
+    color: #CCCCCC;
+    text-decoration: none;
+    border-bottom: 2px solid #CCCCCC;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar-list-item-link:not(.active):hover {
     color: #555555;
+    transition: all 0.3s ease-in-out;
 }
 
 .cart-widget {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
+    gap: 3px;
 }
 
-.cart-icon {
-    font-size: 1.5rem;
-    color: #333333;
+.cart-widget-icon {
+    font-size: 22px;
+    color: #F7F7F7;
+    transition: all 0.3s ease-in-out;
 }
 
-.cart-number {
+.cart-widget-icon:hover {
+    color: #CCCCCC;
+    transform: scale(1.1);
+}
+
+.cart-widget-number {
     background-color: #CCCCCC;
-    padding: 0.2rem 0.5rem;
+    color: #333333;
+    cursor: default;
+    padding: 2px 5px;
     border-radius: 50%;
-    font-size: 0.8rem;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar-list {
+        margin-top: 10px;
+    }
+
+    .navbar-list-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
 }

@@ -62,7 +62,7 @@ const Checkout = () => {
   } else if (getCartCount() === 0) {
     return (
       <section className="checkout-container">
-        <p className="checkout-empty-message">No hay nada por aquí</p>
+        <p className="checkout-empty-message">No hay nada por aquí.</p>
         <Link to={"/"} className="checkout-home-link">
           Volver a la página principal
         </Link>
@@ -71,71 +71,85 @@ const Checkout = () => {
   } else {
     return (
       <>
-        <div className="checkout-form-container">
-          <form className="checkcout-form">
-            <div className="checkout-form-name">
-              <label>Nombre</label>
-              <input
-                type="text"
-                onInput={(event) => {
-                  setName(event.target.value);
-                }}
-              />
-            </div>
-            <div className="checkout-form-email">
-              <label>Email</label>
-              <input
-                type="email"
-                onInput={(event) => {
-                  setEmail(event.target.value);
-                }}
-              />
-            </div>
-            <div className="checkout-form-phone">
-              <label>Teléfono</label>
-              <input
-                type="number"
-                onInput={(event) => {
-                  setPhone(event.target.value);
-                }}
-              />
-            </div>
-            <button
-              type="button"
-              className="checkout-form-button"
-              onClick={generateOrder}
-            >
-              Generar Orden
-            </button>
-          </form>
-        </div>
-        <div className="checkout-items-container">
-          <table className="checkout-items-table">
-            <tbody>
-              {cart.map((item) => (
-                <tr key={item.id}>
-                  <td>
-                    <img src={item.image} alt={item.title} width={32} />
+        <section className="checkout-container">
+          <div className="checkout-form-container">
+            <form className="checkcout-form">
+              <div className="checkout-form-name">
+                <label>Nombre</label>
+                <input
+                  type="text"
+                  onInput={(event) => {
+                    setName(event.target.value);
+                  }}
+                />
+              </div>
+              <div className="checkout-form-email">
+                <label>Email</label>
+                <input
+                  type="email"
+                  onInput={(event) => {
+                    setEmail(event.target.value);
+                  }}
+                />
+              </div>
+              <div className="checkout-form-phone">
+                <label>Teléfono</label>
+                <input
+                  type="number"
+                  onInput={(event) => {
+                    setPhone(event.target.value);
+                  }}
+                />
+              </div>
+              <button
+                type="button"
+                className="checkout-form-button"
+                onClick={generateOrder}
+              >
+                Generar Orden
+              </button>
+            </form>
+          </div>
+          <div className="checkout-items-container">
+            <table className="checkout-items-table">
+              <tbody>
+                {cart.map((item) => (
+                  <tr key={item.id} className="checkout-item-row">
+                    <td className="checkout-item-cell">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="checkout-item-image"
+                      />
+                    </td>
+                    <td className="checkout-item-cell checkout-item-title">
+                      {item.title}
+                    </td>
+                    <td className="checkout-item-cell checkout-item-price">
+                      ${item.price}
+                    </td>
+                    <td className="checkout-item-cell checkout-item-quantity">
+                      x{item.quantity}
+                    </td>
+                    <td className="checkout-item-cell checkout-item-total">
+                      ${item.quantity * item.price}
+                    </td>
+                  </tr>
+                ))}
+                <tr className="total-row">
+                  <td colSpan="4" className="checkout-item-cell total-label">
+                    <b>Total</b>
                   </td>
-                  <td>{item.title}</td>
-                  <td>${item.price}</td>
-                  <td>x{item.quantity}</td>
-                  <td>${item.quantity * item.price}</td>
+                  <td className="checkout-item-cell total-cell">
+                    <b>${getCartTotal()}</b>
+                  </td>
                 </tr>
-              ))}
-              <tr>
-                <td>
-                  <b>Total</b>
-                </td>
-                <td>
-                  <b>${getCartTotal()}</b>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        {loading && <p className="checkout-loading">Generando orden...</p>}
-        {error && <p className="checkout-error">{error}</p>}
+              </tbody>
+            </table>
+          </div>
+          {loading && <p className="checkout-loading">Generando orden...</p>}
+          {error && <p className="checkout-error">{error}</p>}
+        </section>
       </>
     );
   }

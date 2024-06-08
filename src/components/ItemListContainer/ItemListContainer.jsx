@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList";
+import Loader from "../Loader/Loader";
 import {
   collection,
   getDocs,
@@ -36,7 +37,7 @@ const ItemListContainer = () => {
 
   return (
     <section className="list-container">
-      {loading ? <p>Cargando...</p> : <ItemList list={items} />}
+      {loading ? <Loader /> : <ItemList list={items} />}
     </section>
   );
 };

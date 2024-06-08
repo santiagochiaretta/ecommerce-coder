@@ -10,16 +10,16 @@ const CartWidget = () => {
     return (
       <div className="cart-widget">
         <Link to={"/cart"}>
-          <FaOpencart className="cart-icon" />
+          <FaOpencart className="cart-widget-icon" />
         </Link>
-        <span className="cart-number">{getCartCount()}</span>
+        <span title={`${getCartCount()} productos`} className="cart-widget-number">{getCartCount()}</span>
       </div>
     );
   } else {
     return (
       <div className="cart-widget">
         <Link to={"/cart"}>
-          <FaOpencart className="cart-icon" />
+          <FaOpencart className="cart-widget-icon" />
         </Link>
       </div>
     );
