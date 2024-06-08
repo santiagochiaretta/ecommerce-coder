@@ -66,7 +66,7 @@ const Checkout = () => {
   } else if (getCartCount() === 0) {
     return (
       <section className="checkout-container">
-        <p className="checkout-empty-message">No hay nada por aquí.</p>
+        <p className="checkout-empty-message">El proceso de compra ha finalizado o la página de checkout no está disponible en este momento.</p>
         <Link to={"/"} className="checkout-home-link">
           Volver a la página principal
         </Link>

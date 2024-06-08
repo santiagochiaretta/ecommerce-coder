@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Maintenance.css";
 
 const Maintenance = () => {
@@ -8,6 +9,9 @@ const Maintenance = () => {
       <p className="maintenance-message">
         Esta página está actualmente en mantenimiento, disculpe las molestias.
       </p>
+      <Link to={"/"} className="checkout-home-link">
+        Volver a la página principal
+      </Link>
     </section>
   );
 };

@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    font-family: "Lora", serif;
+    font-family: "Lora", sans-serif;
 }
 
 .not-found-title {
