@@ -8,21 +8,21 @@
 
 #### Características
 
-*VirtualStore es una aplicación web desarrollada con React.js, creada para alojar sitios web, estilo e-commerce, para nuestros clientes.*
-*Interfaz de usuario moderna, escalable y personalizable.*
+_VirtualStore (https://e-commerce-coder.netlify.app/) es una aplicación web desarrollada con React.js, creada para alojar sitios web, del estilo e-commerce._
+_Interfaz de usuario moderna, escalable y personalizable.Todo está pensado para que pueda configurarse._
 
 #### Tecnologías Utilizadas
 
-*Javacript, React Js, CSS, Bootstrap, ChatGPT, Firebase*
+_Javacript, React Js, CSS, Bootstrap, ChatGPT, Firebase, Netlify_
 
 #### Estado del Proyecto
 
-*La aplicación está en desarrollo y actualmente está disponible en versión beta. Esta versión muestra, a modo de ejemplo, una tienda virtual destinada a la venta de autopartes, con las siguientes características:*
+_La aplicación está en desarrollo, pero actualmente está disponible, a modo de ejemplo, una tienda virtual destinada a la venta de autopartes, en versión beta. Esta versión muestra con las siguientes características:_
 
-*Secciones clickeables: Diferentes categorías y productos.*
+_Secciones clickeables: Diferentes categorías y productos._
 
-*Diseño minimalista: Estética limpia y moderna.*
+_Diseño minimalista: Estética limpia y moderna._
 
-*Intuitiva de utilizar: Fácil navegación para los usuarios.*
+_Intuitiva de utilizar: Fácil navegación para los usuarios._
 
-*Manejo de órdenes de compra: A través de Firebase.*
+_Manejo de órdenes de compra: A través de Firebase._
